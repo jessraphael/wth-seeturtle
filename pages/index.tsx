@@ -10,7 +10,9 @@ import GridContainer from "../components/GridContainer";
 import LeftGrid from "../components/LeftGrid";
 import RightGrid from "../components/RightGrid";
 import TurtleFeed from "../components/TurtleFeed";
+import Donate from "../components/Donate";
 import AboutUs from "../components/AboutUs";
+import How from "../components/How";
 
 const Home: NextPage = () => {
   return (
@@ -45,9 +47,11 @@ const Home: NextPage = () => {
             <TurtleFeed />
           </RightGrid>
         </GridContainer>
+        <Donate />
         <AboutUs>
           <p className="text-white text-lg">About Us</p>
         </AboutUs>
+        <How />
       </Body>
     </>
   );

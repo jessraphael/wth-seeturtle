@@ -1,21 +1,55 @@
 import { FC } from "react";
 import Image from "next/image";
-import { BiHomeAlt, BiSliderAlt, BiVideo } from "react-icons/bi";
+import {
+  BiHomeAlt,
+  BiDonateHeart,
+  BiVideo,
+  BiQuestionMark,
+  BiInfoCircle,
+} from "react-icons/bi";
+import { AiOutlineGithub } from "react-icons/ai";
 
 const Navbar: FC = () => {
   return (
     <>
-      <div className="flex flex-col w-16 h-screen fixed justify-evenly items-center left-8 py-8">
-        <Image
-          src="/icon.png"
-          alt="SeeTurtle icon"
-          layout="fixed"
-          height={36}
-          width={36}
-        />
-        <BiHomeAlt className="text-white text-3xl cursor-pointer mt-2" />
-        <BiVideo className="text-white text-3xl cursor-pointer mt-2" />
-        <BiSliderAlt className="text-white text-3xl mt-auto cursor-pointer" />
+      <div className="absolute w-16 left-8 h-screen">
+        <div className="flex flex-col w-16 fixed justify-between items-center h-full py-8">
+          <a href="#navbar">
+            <Image
+              src="/icon.png"
+              alt="SeeTurtle icon"
+              layout="fixed"
+              height={36}
+              width={36}
+            />
+          </a>
+
+          <div className="flex flex-col gap-8 mt-auto">
+            <a href="#landing">
+              <BiHomeAlt className="icon" />
+            </a>
+            <a href="#video">
+              <BiVideo className="icon" />
+            </a>
+            <a href="#donate">
+              <BiDonateHeart className="icon" />
+            </a>
+            <a href="#aboutus">
+              <BiInfoCircle className="icon" />
+            </a>
+            <a href="#how">
+              <BiQuestionMark className="icon" />
+            </a>
+          </div>
+          <a
+            href="https://github.com/Raypuff/wth-seeturtle"
+            target="blank"
+            rel="noreferrer"
+            className="mt-auto"
+          >
+            <AiOutlineGithub className="icon" />
+          </a>
+        </div>
       </div>
     </>
   );

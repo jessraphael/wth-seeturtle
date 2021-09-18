@@ -5,11 +5,15 @@ import Image from "next/image";
 import Body from "../components/Body";
 import LeftNavbar from "../components/LeftNavbar";
 import Navbar from "../components/Navbar";
+import Landing from "../components/Landing";
 import GridContainer from "../components/GridContainer";
 import LeftGrid from "../components/LeftGrid";
 import RightGrid from "../components/RightGrid";
 import TurtleFeed from "../components/TurtleFeed";
 import Chat from "../components/Chat";
+import Donate from "../components/Donate";
+import AboutUs from "../components/AboutUs";
+import How from "../components/How";
 
 const Home: NextPage = () => {
   return (
@@ -24,16 +28,8 @@ const Home: NextPage = () => {
       </Head>
       <Body>
         <LeftNavbar />
-        <Navbar>
-          <Image
-            src="/profilepic.png"
-            alt="Profile picture"
-            layout="fixed"
-            width={48}
-            height={48}
-            className="rounded-xl"
-          />
-        </Navbar>
+        <Navbar />
+        <Landing />
         <GridContainer>
           <LeftGrid></LeftGrid>
           <RightGrid>
@@ -41,6 +37,11 @@ const Home: NextPage = () => {
             <Chat/ >
           </RightGrid>
         </GridContainer>
+        <Donate />
+        <AboutUs>
+          <p className="text-white text-lg">About Us</p>
+        </AboutUs>
+        <How />
       </Body>
     </>
   );

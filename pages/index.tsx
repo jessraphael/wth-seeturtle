@@ -9,6 +9,7 @@ import GridContainer from "../components/GridContainer";
 import LeftGrid from "../components/LeftGrid";
 import RightGrid from "../components/RightGrid";
 import TurtleFeed from "../components/TurtleFeed";
+import Chat from "../components/Chat";
 
 const Home: NextPage = () => {
   return (
@@ -37,6 +38,7 @@ const Home: NextPage = () => {
           <LeftGrid></LeftGrid>
           <RightGrid>
             <TurtleFeed />
+            <Chat/ >
           </RightGrid>
         </GridContainer>
       </Body>

@@ -10,7 +10,7 @@ export function useStore(): any {
 
 export function StoreProvider({children}: any): any {
 
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
 
     // CREATE FUNCTION
     function addItem(itemToAdd: Object, collectionType: string, itemID: string) {

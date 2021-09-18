@@ -24,7 +24,7 @@ export function StoreProvider({children}: any): any {
         ref
         .doc(itemToEditID)
         .update(itemToEdit)
-        .catch((err) => {
+        .catch((err: unknown) => {
             console.error(err);
         });
     }
@@ -36,7 +36,7 @@ export function StoreProvider({children}: any): any {
         ref
         .doc(idToDelete)
         .delete()
-        .catch((err) => {
+        .catch((err: unknown) => {
             console.error(err);
         });
   }

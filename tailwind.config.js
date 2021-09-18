@@ -21,7 +21,16 @@ module.exports = {
           '800': '#00113B',
           '900': '#000208'
         },
-      }
+        'lightblue': {
+          DEFAULT: '#F764B2',
+        },
+        'lightred': {
+          DEFAULT: '#6E98FF',
+        },
+        'dark90': {
+          DEFAULT: "#000c29",
+        }
+      },
     },
   },
   variants: {

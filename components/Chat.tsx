@@ -19,7 +19,7 @@ const Chat: FC = ({children}) => {
 function SignIn() {
 
     const signInWithGoogle = () => {
-        const provider = auth.GoogleAuthProvider();
+        const provider = new firebase.auth.GoogleAuthProvider();
         auth.signInWithPopup(provider);
     }
 
@@ -34,12 +34,24 @@ function SignOut() {
     ) 
 }
 
+function AuthButton() {
+
+    const [user] = useAuthState(auth);
+
+    return (
+        <> 
+        {user ? <SignOut/>: <SignIn/>}
+        </>
+    )
+}
+
 function ChatRoom() {
    const messagesRef = store.collection('messages');
    const query = messagesRef.orderBy('createdAt').limit(25);
 
    const [messages] = useCollectionData(query, {idField: 'id'});
    const [formValue, setFormValue] = useState('')
+   const [user] = useAuthState(auth);
 
    const sendMessage = async(e: any) => {
         e.preventDefault();
@@ -61,19 +73,19 @@ function ChatRoom() {
     <div>
         {messages && messages.map(msg => <ChatMessage key = {msg.id} message = {msg}/>)}
     </div>
-
     <form onSubmit={sendMessage}>
         <input value = {formValue} onChange = {(e) => setFormValue(e.target.value)}/>
         <button type = 'submit'>Send</button>
-    </form>
+    </form> 
    </>
    )
 }
 
+
 function ChatMessage(props: any) {
     const {text, uid, photoURL} = props.message;
 
-    const messageClass = uid === auth.currentUser!.uid ? 'sent': 'received';
+    const messageClass = auth.currentUser ? auth.currentUser.uid === uid ? "sent" : "received ": "received";
 
     return (
         <>

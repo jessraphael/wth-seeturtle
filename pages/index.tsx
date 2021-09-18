@@ -8,6 +8,7 @@ import Navbar from "../components/Navbar";
 import Landing from "../components/Landing";
 import GridContainer from "../components/GridContainer";
 import LeftGrid from "../components/LeftGrid";
+import Dashboard from "../components/Dashboard";
 import RightGrid from "../components/RightGrid";
 import TurtleFeed from "../components/TurtleFeed";
 import Donate from "../components/Donate";
@@ -30,9 +31,11 @@ const Home: NextPage = () => {
         <Navbar />
         <Landing />
         <GridContainer>
-          <LeftGrid></LeftGrid>
+          <LeftGrid>
+            <Dashboard />
+          </LeftGrid>
           <RightGrid>
-            <TurtleFeed />
+            <TurtleFeed embedId="2I6hDqCrI9o" />
           </RightGrid>
         </GridContainer>
         <Donate />

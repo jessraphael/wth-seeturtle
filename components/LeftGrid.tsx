@@ -1,10 +1,6 @@
 import { FC } from "react";
 
-const LeftGrid: FC = () => {
-  return (
-    <div className="col-span-2 w-full bg-blue-200">
-      <div>left grid</div>
-    </div>
-  );
+const LeftGrid: FC = ({ children }) => {
+  return <div className="col-span-2 ml-8 mr-8">{children}</div>;
 };
 export default LeftGrid;

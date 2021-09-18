@@ -10,7 +10,7 @@ export function useStore(): any {
 
 export function StoreProvider({children}: any): any {
 
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
 
     // CREATE FUNCTION
     function addItem(itemToAdd: Object, collectionType: string, itemID: string) {
@@ -24,7 +24,7 @@ export function StoreProvider({children}: any): any {
         ref
         .doc(itemToEditID)
         .update(itemToEdit)
-        .catch((err) => {
+        .catch((err: unknown) => {
             console.error(err);
         });
     }
@@ -36,7 +36,7 @@ export function StoreProvider({children}: any): any {
         ref
         .doc(idToDelete)
         .delete()
-        .catch((err) => {
+        .catch((err: unknown) => {
             console.error(err);
         });
   }

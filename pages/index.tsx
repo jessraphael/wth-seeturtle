@@ -11,6 +11,7 @@ import LeftGrid from "../components/LeftGrid";
 import Dashboard from "../components/Dashboard";
 import RightGrid from "../components/RightGrid";
 import TurtleFeed from "../components/TurtleFeed";
+import Chat from "../components/Chat";
 import Donate from "../components/Donate";
 import AboutUs from "../components/AboutUs";
 import How from "../components/How";

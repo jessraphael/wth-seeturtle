@@ -5,7 +5,7 @@ import { BiHomeAlt, BiSliderAlt, BiVideo } from "react-icons/bi";
 const Navbar: FC = () => {
   return (
     <>
-      <div className="flex flex-col w-16 h-full absolute justify-evenly items-center left-8 py-8">
+      <div className="flex flex-col w-16 h-screen fixed justify-evenly items-center left-8 py-8">
         <Image
           src="/icon.png"
           alt="SeeTurtle icon"

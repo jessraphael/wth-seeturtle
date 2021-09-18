@@ -5,6 +5,7 @@ import Image from "next/image";
 import Body from "../components/Body";
 import LeftNavbar from "../components/LeftNavbar";
 import Navbar from "../components/Navbar";
+import Landing from "../components/Landing";
 import GridContainer from "../components/GridContainer";
 import LeftGrid from "../components/LeftGrid";
 import RightGrid from "../components/RightGrid";
@@ -33,6 +34,9 @@ const Home: NextPage = () => {
             className="rounded-xl"
           />
         </Navbar>
+        <Landing>
+          <div>hey</div>
+        </Landing>
         <GridContainer>
           <LeftGrid></LeftGrid>
           <RightGrid>

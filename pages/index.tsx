@@ -27,20 +27,8 @@ const Home: NextPage = () => {
       </Head>
       <Body>
         <LeftNavbar />
-        <Navbar>
-          {/* <Image
-            src="/profilepic.png"
-            alt="Profile picture"
-            layout="fixed"
-            width={48}
-            height={48}
-            className="rounded-xl"
-          /> */}
-          <p className="text-white text-lg">Navbar</p>
-        </Navbar>
-        <Landing>
-          <p className="text-white text-lg">Landing</p>
-        </Landing>
+        <Navbar />
+        <Landing />
         <GridContainer>
           <LeftGrid></LeftGrid>
           <RightGrid>

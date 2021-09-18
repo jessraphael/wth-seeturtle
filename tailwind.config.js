@@ -4,6 +4,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      height: {
+        almost: 'calc(100vh - 96px)',
+      },
       colors: {
         'seeturtle': {
           DEFAULT: '#003DD4',

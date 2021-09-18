@@ -15,7 +15,7 @@ export function StoreProvider({children}: any): any {
     // CREATE FUNCTION
     function addItem(itemToAdd: Object, collectionType: string, itemID: string) {
         const ref = store.collection(collectionType);
-        ref.doc(itemID).set(itemToAdd).catch((err) => {console.error(err)});
+        ref.doc(itemID).set(itemToAdd).catch((err: unknown) => {console.error(err)});
     }
 
     // EDIT FUNCTION

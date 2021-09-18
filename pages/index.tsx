@@ -46,7 +46,7 @@ const Home: NextPage = () => {
           </RightGrid>
         </GridContainer>
         <AboutUs>
-          <p className="text-white text-lg">About Us</p>
+          <p className="text-white text-lg">Challenge</p>
         </AboutUs>
       </Body>
     </>

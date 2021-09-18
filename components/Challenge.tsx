@@ -3,13 +3,10 @@ import { FC } from "react";
 const Challenge: FC = ({ children }) => {
   return (
     <>
-      <div className="w-screen bg-seeturtle-800 flex justify-center">
+      <div className="w-screen flex justify-center">
         <div className="max-w-7xl pr-16 pl-32 h-full w-full relative">
           {children}
           <br/>
-      <br/>
-      <br/>
-      <br/>
       <br/>
            <h1 className="text-white text-centre text-7xl font-semibold">
           <span className="font-semibold">Our Challenge</span>

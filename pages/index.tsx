@@ -37,7 +37,6 @@ const Home: NextPage = () => {
         </GridContainer>
         <Donate />
         <AboutUs>
-          <p className="text-white text-lg">Challenge</p>
         </AboutUs>
         <How />
       </Body>

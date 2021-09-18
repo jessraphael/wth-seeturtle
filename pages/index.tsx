@@ -10,6 +10,7 @@ import GridContainer from "../components/GridContainer";
 import LeftGrid from "../components/LeftGrid";
 import RightGrid from "../components/RightGrid";
 import TurtleFeed from "../components/TurtleFeed";
+import AboutUs from "../components/AboutUs";
 
 const Home: NextPage = () => {
   return (
@@ -25,17 +26,18 @@ const Home: NextPage = () => {
       <Body>
         <LeftNavbar />
         <Navbar>
-          <Image
+          {/* <Image
             src="/profilepic.png"
             alt="Profile picture"
             layout="fixed"
             width={48}
             height={48}
             className="rounded-xl"
-          />
+          /> */}
+          <p className="text-white text-lg">Navbar</p>
         </Navbar>
         <Landing>
-          <div>hey</div>
+          <p className="text-white text-lg">Landing</p>
         </Landing>
         <GridContainer>
           <LeftGrid></LeftGrid>
@@ -43,6 +45,9 @@ const Home: NextPage = () => {
             <TurtleFeed />
           </RightGrid>
         </GridContainer>
+        <AboutUs>
+          <p className="text-white text-lg">About Us</p>
+        </AboutUs>
       </Body>
     </>
   );

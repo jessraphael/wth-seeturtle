@@ -10,7 +10,9 @@ import GridContainer from "../components/GridContainer";
 import LeftGrid from "../components/LeftGrid";
 import RightGrid from "../components/RightGrid";
 import TurtleFeed from "../components/TurtleFeed";
+import Donate from "../components/Donate";
 import AboutUs from "../components/AboutUs";
+import How from "../components/How";
 
 const Home: NextPage = () => {
   return (
@@ -25,29 +27,19 @@ const Home: NextPage = () => {
       </Head>
       <Body>
         <LeftNavbar />
-        <Navbar>
-          {/* <Image
-            src="/profilepic.png"
-            alt="Profile picture"
-            layout="fixed"
-            width={48}
-            height={48}
-            className="rounded-xl"
-          /> */}
-          <p className="text-white text-lg">Navbar</p>
-        </Navbar>
-        <Landing>
-          <p className="text-white text-lg">Landing</p>
-        </Landing>
+        <Navbar />
+        <Landing />
         <GridContainer>
           <LeftGrid></LeftGrid>
           <RightGrid>
             <TurtleFeed />
           </RightGrid>
         </GridContainer>
+        <Donate />
         <AboutUs>
           <p className="text-white text-lg">Challenge</p>
         </AboutUs>
+        <How />
       </Body>
     </>
   );
